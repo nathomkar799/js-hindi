@@ -31,16 +31,44 @@ const myfunction = function(){
 
 // console.log(typeof bigNumber);//bigint
 
-console.log(myObj);
+// console.log(myObj);
 
 //https://262.ecma-international.org/5.1/#sec-8
 
-
-
-
-
-
-
-//Reference (Non-Primitive): Directly reference(address) is given.
+////Reference (Non-Primitive): Directly reference(address) is given.
 
 //Array, Objects, Functions
+
+//+++++++++++++++++++++++++++++++++++++++++
+//Memory
+
+//1.Stack (Primitive)
+//2. Heap (Non-Primitive) 
+
+let myYTName = "Nath"
+let otherYTName = myYTName
+// console.log(otherYTName);
+otherYTName = "Omkar"
+
+// console.log(myYTName);
+// console.log(otherYTName);
+
+let user1 = {
+    email: "nath@google.com",
+    upi: "@ybl"
+}
+
+let user2 = user1
+user2.email = "no.pot"
+
+// console.log(user1);//{ email: 'no.pot', upi: '@ybl' }
+// console.log(user2);//{ email: 'no.pot', upi: '@ybl' }
+
+
+
+
+
+
+
+
+
