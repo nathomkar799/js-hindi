@@ -18,4 +18,16 @@ const newString = gameName.substring(0,4);
 // console.log(newString);
 
 const anothorString = gameName.slice(-8, 4)
-console.log(anothorString);
+// console.log(anothorString);
+
+const newStringOne = "        Omkar          "
+// console.log(newStringOne.trim());
+// console.log(newStringOne);
+
+const url = "https://miniature-telegram-g6jxxjvxw9x3w69v.github.dev/"
+
+console.log(url.split('-'));
+console.log(url.includes('omkar'));
+console.log(url.replace("-","#"));
+
+
