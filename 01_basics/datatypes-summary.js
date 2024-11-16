@@ -64,11 +64,16 @@ user2.email = "no.pot"
 // console.log(user1);//{ email: 'no.pot', upi: '@ybl' }
 // console.log(user2);//{ email: 'no.pot', upi: '@ybl' }
 
+// **************************************************************
+// Return type of variables in JS:
+//  Number = number
+// String = string
+// Boolean = boolean
+// null = object
+// undefined = undefined
+// Symbol = symbol
+// BigInt = bigint 
 
-
-
-
-
-
-
-
+// Arrays = object
+// Function = function
+// Object = object
