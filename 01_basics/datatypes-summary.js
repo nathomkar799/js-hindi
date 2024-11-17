@@ -1,6 +1,6 @@
 //Datatypes are categorized on the basis of how they are stored in memory and how they can be accessed.:Primitive & Non-primitive.
 
-//Primitive: call by value : So when the are copied then the reference is not given rather than the copied version is given. Further changes are reflected in its copied version. 
+//Primitive (Stack): call by value : So when the are copied then the reference is not given rather than the copied version is given. Further changes are reflected in its copied version. 
 
 // 7 Types: String, Number, Boolean, null, undefined, Symbol(When the value needs to be unique, it is used), BigInt(Very big unhandleable int)
 
@@ -33,9 +33,8 @@ const myfunction = function(){
 
 // console.log(myObj);
 
-//https://262.ecma-international.org/5.1/#sec-8
 
-////Reference (Non-Primitive): Directly reference(address) is given.
+////Reference (Non-Primitive)(Heap): Directly reference(address) is given.
 
 //Array, Objects, Functions
 
@@ -61,8 +60,8 @@ let user1 = {
 let user2 = user1
 user2.email = "no.pot"
 
-// console.log(user1);//{ email: 'no.pot', upi: '@ybl' }
-// console.log(user2);//{ email: 'no.pot', upi: '@ybl' }
+console.log(user1);//{ email: 'no.pot', upi: '@ybl' }
+console.log(user2);//{ email: 'no.pot', upi: '@ybl' }
 
 // **************************************************************
 // Return type of variables in JS:
@@ -77,3 +76,5 @@ user2.email = "no.pot"
 // Arrays = object
 // Function = function
 // Object = object
+const url = "https://262.ecma-international.org/5.1/#sec-8"
+
