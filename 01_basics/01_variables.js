@@ -1,10 +1,10 @@
 const account_Id = 144553
 let account_Email = "omkar@gmail.com"
 var account_Password = "12345"
-account_City = "Jaipur" //dont use this type of variable intialization
+account_City = "Jaipur" //dont use this type of variable intializations
 let account_State; //undefined
 
-// account_Id = 5
+//account_Id = 5
 
 account_Email = "pack@gmail.com"
 account_Password = "1561651561"
