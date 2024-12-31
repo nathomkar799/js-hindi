@@ -2,7 +2,9 @@
 
 // alert(3+3) //we are using nodejs not browser
 
-console.log(3
+console.log
+(
+    3
     +
     3 //code readability should be high
 )
@@ -18,7 +20,7 @@ let isLoggedIn = false
 // string => ""
 // boolean => true/false
 // null => standalone value
-// undegined => unassigned variable
+// undefined => unassigned variable
 // symbol => unique 
 
 

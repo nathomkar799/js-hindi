@@ -15,7 +15,7 @@ let isLoggedIn = "Omkar"
 
 let bolleanIsLoggedIn = Boolean(isLoggedIn)
 // console.log(typeof bolleanIsLoggedIn);
-// console.log(bolleanIsLoggedIn);
+console.log(bolleanIsLoggedIn);
 
 // 1 => true; 0=> flase
 // "" => false
@@ -64,7 +64,7 @@ num1 = num2 = num3 = 2 + 2
 
 let gameCounter = 100
 gameCounter++;
-console.log(gameCounter);
+// console.log(gameCounter);
 
 
 
