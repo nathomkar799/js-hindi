@@ -43,6 +43,38 @@ function loginUserManage(username = "SAM"){
     
 }
 
-loginUserManage()
+// loginUserManage()
 
+function calculateCartPrice(value1, value2, ...num1)//Here "..." is rest operator, using this we can store all the values in an array.
+{
+return num1
+}
+
+// console.log(calculateCartPrice(200, 300, 500, 2000));//[ 200, 300, 500, 2000 ]
+console.log(calculateCartPrice(200, 300, 500, 2000));//[ 500, 2000 ]
+
+const user = {
+    username : "nathpiro",
+    price : "99"
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+// handleObject(user)
+
+handleObject({
+    username: "sam",
+    price : 399
+})
+
+const myNewArray = [200, 600, 500, 999]
+
+function returnSecondValue(getArray) {
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 600, 500, 999]));
 
