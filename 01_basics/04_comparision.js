@@ -17,6 +17,9 @@
 
 //need to avoid all the above 6 statements while coding.
 
+const a = null
+const b = Number(a)
+// console.log(b);//0
 //===
 
 console.log("2" === 2);//false beacause triple === checks strictly the operands.

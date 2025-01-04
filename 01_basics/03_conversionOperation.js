@@ -1,11 +1,11 @@
 let score = null
 
-// console.log(typeof score);
-// console.log(typeof (score));
+// console.log(typeof score);//object
+// console.log(typeof (score));//object
 
 let valueInNumber = Number(score)
-// console.log(typeof (valueInNumber));
-// console.log(valueInNumber);
+// console.log(typeof (valueInNumber));//number
+// console.log(valueInNumber);//0
 
 // "33" => 33
 // "33abs" => NaN
@@ -14,8 +14,10 @@ let valueInNumber = Number(score)
 let isLoggedIn = "Omkar"
 
 let bolleanIsLoggedIn = Boolean(isLoggedIn)
-// console.log(typeof bolleanIsLoggedIn);
-console.log(bolleanIsLoggedIn);
+// console.log(typeof bolleanIsLoggedIn);//boolean
+// console.log(bolleanIsLoggedIn);//true
+// console.log(isLoggedIn);//Omkar
+
 
 // 1 => true; 0=> flase
 // "" => false
@@ -24,27 +26,27 @@ console.log(bolleanIsLoggedIn);
 let someNumber = 33
 
 let stringNumber = String(someNumber)
-// console.log(typeof stringNumber);
-// console.log(stringNumber);
+// console.log(typeof stringNumber);//string
+// console.log(stringNumber);//33
 
 // **********************Operations************************
 
 let value = 3
 let negValue = -value
-// console.log(negValue);
+// console.log(negValue);//-3
 
 // console.log(2+2);
 // console.log(2-2);
 // console.log(2*2);
 // console.log(2**2);
 // console.log(2/2);
-// console.log(2%3);
+// console.log(2%3);//2
 
 let str1 = "Hello"
 let str2 = " Omkar"
 
 let str3 = str1 + str2
-// console.log(str3);
+// console.log(str3);//Hello Omkar
 
 // console.log("1" + 2);//12
 // console.log(1 + "2");//12

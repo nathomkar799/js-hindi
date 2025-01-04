@@ -1,7 +1,7 @@
-const name = "Omkar-Nath"
+const name = "Omkar Nath"
 const namel = "Nath"
 
-// console.log(`Hello my first name is ${name} and my last name is ${namel}.`);
+console.log(`Hello my first name is ${name} and my last name is ${namel}.`);
 
 const gameName = new String ('Omkar-Nath')
 // console.log(gameName[0]);
