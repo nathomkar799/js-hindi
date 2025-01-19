@@ -6,3 +6,15 @@ Javascript
 
 These things are default beahaviour of Javascript.
 
+Execution Context: 
+    => Execute one line of code at a time.
+    |
+    |
+    |-> console.log-> 1                 Each operation waits for the last one to complete    
+    |                                   before executing.
+    |-> console.log-> 2                                                    
+    
+    CALL STACK                  MEMORY HEAP
+
+    
+

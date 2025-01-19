@@ -1,8 +1,8 @@
 const mcu = ["ironman", "spiderman", "thor" ]
 const dc = ["batman", "flash", "superman"]
 
-// mcu.push(dc)
-// console.log(mcu);//here dc is put in mcu at last as an element.
+mcu.push(dc)
+console.log(mcu);//here dc is put in mcu at last as an "element".
 //that proves that arrays in js takes anytype of DataTransfer.
 // console.log(mcu[3][2]);
 // const newArr = mcu.concat(dc)
