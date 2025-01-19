@@ -19,32 +19,55 @@
    </div>
 </body>
 <script>
-    // Events run in sequence.
-    // document.getElementById('owl').onclick = function () {
-    //     alert("owl clicked")
-    // }
-    //attachEvent()
-    //jQuery - on
+    // // Events run in sequence.
+    // // document.getElementById('owl').onclick = function () {
+    // //     alert("owl clicked")
+    // // }
+    // //attachEvent()
+    // //jQuery - on
 
-    //type, timestamp, defaultPrevented
-    //target, toElement, srcElement, currenttarget,
-    //clientX, ClientY, screenX, screenY
-    //altkey, ctrlkey, shiftkey, keyCode
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log(e);
+    // //type, timestamp, defaultPrevented
+    // //target, toElement, srcElement, currenttarget,
+    // //clientX, ClientY, screenX, screenY
+    // //altkey, ctrlkey, shiftkey, keyCode
+    // // document.getElementById('owl').addEventListener('click', function(e){
+    // //     console.log(e);
         
+    // // }, false)
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
     // }, false)
 
-    document.getElementById('images').addEventListener('click', function(e){
-        console.log("clicked inside the ul");
-    }, false)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked ");
+    //     e.stopPropagation(); //it stops at it. doesnt go up like without it.
+    // }, false)
+    // // when there is true then first comes clicked inside. but when false is selected the owl clicked comes first
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log("owl clicked ");
-        e.stopPropagation(); //it stops at it. doesnt go up like without it.
-    }, false)
 
-    // when there is true then first comes clicked inside. but when false is selected the owl clicked comes first
-    document.getElementById('google')
+    // document.getElementById('google').addEventListener('click', function(e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+    // },false)
+
+    // document.querySelector('#images').addEventListener('click', function (e){
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove();
+    //     // removeIt.parentNode.removeChild(removeIt)
+    // }, false) //This one removes all the list items when clicked on li so thats undesirable.
+
+    document.querySelector('#images').addEventListener('click', function (e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    }, false)
 </script>
 </html>

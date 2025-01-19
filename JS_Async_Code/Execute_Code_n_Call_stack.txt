@@ -1,0 +1,28 @@
+Execution Context :
+=>When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
+
+During the context runtime, the parser parses the source code and allocates memory for the variables and functions. The source code is generated and gets executed
+
+When we give a code to JS then:
+    1. First of all "Global Execution Context" is made => It is refered to "this".
+            Interview Perspective : Value of this in a browser is Window.
+    2. Functional Execution Context
+    3. (Optional) Eval Execution Context : usually it is in Global
+
+2 Phases:
+There are two phases of JavaScript execution context:
+
+Creation phase or Memory Creation Phase: In this phase, the JavaScript engine creates the execution context and sets up the script's environment. It determines the values of variables and functions and sets up the scope chain for the execution context.
+"Jagah diya jata hai idhar" all the variables have undefined as Value and all the functions have the definition only.
+
+Execution phase: In this phase, the JavaScript engine executes the code in the execution context. It processes any statements or expressions in the script and evaluates any function calls.
+"jagah bhara jata hai. Kaam kiya jata hai." 
+
+But when a function is found then another new vatiable (environment + execution thread)=> Execution Context => Creation Phase and Execution Phase. All the variables whether it is a parameter or not being value allocated is "undefined" in the creation phase and then value given at execution phase having the finction executed that is returned at Global executional Context. After that the new Execution Context is being terminated and deleted aka cleaned.
+
+Then it continues to the privious execution context. Then it repeats.
+
+
+Call Stack : LIFO : Last In First out
+
+
