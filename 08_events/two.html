@@ -9,4 +9,20 @@
     <h1>Chai aur Code </h1>
     <button id = "stop"> STOP </button>
 </body>
+<script>
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "Omkar Nath N Code";
+    }
+    const sayOmkar = function() {
+        console.log("Hii Omkar");
+    };
+    // setTimeout(changeText, 2000);//will effect chnage after a given period of time
+    const no = setTimeout(changeText, 2000);
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(no);
+        console.log("kaa re");
+        
+    }, false)// This will be like : Agar 2 second k pahle tum stop button press kar diya to setTimeout work nahi karega boss.
+
+</script>
 </html>
