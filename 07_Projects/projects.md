@@ -4,7 +4,7 @@
 [ Click Here ] (
     https://stackblitz.com/edit/dom-project-chaiaurcode-h1ydzobb?file=1-colorChanger%2Fchaiaurcode.js)
 
-## Color changer
+## 1 Color changer
 
 ```javascript
 const buttons = document.querySelectorAll('.button');
@@ -35,7 +35,8 @@ buttons.forEach(function (button) {
 
 
 ```
-## BMI Calculator
+## 2 BMI Calculator
+
 
 ```javascript
 const form = document.querySelector('form');
@@ -56,4 +57,35 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${bmi}</span>`;
   }
 });
+```
+
+
+## 6 Unlimited Colors
+
+```javascript
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+let checkPoint;
+const startChanging = function () {
+  checkPoint = setInterval(function () {
+    document.body.style.backgroundColor = randomColor();
+  }, 0);
+};
+
+const stopChanging = function () {
+  clearInterval(checkPoint);
+};
+
+// console.log(randomColor())
+document.querySelector('#start').addEventListener('click', startChanging);
+
+document.querySelector('#stop').addEventListener('click', stopChanging);
+
 ```
