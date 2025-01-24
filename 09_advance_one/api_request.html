@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        #card {
+            width: 400px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        #photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #description {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #button button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #button button:hover {
+            background-color: #0056b3;
+        }
+
+        #folCount h1 {
+            font-size: 16px;
+            color: #555;
+            margin: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="card">
+        <div id="photo">
+            <img src="ReadyStates.png" alt="Profile Picture" />
+        </div>
+        <div id="description">
+            <div id="button">
+                <button type="button">View</button>
+            </div>
+            <div id="folCount">
+                <h1>Here will be the number of followers</h1>
+            </div>
+        </div>
+    </div>
+</body>
+  <script>
+
+    //traditional way
+    const requestUrl = "https://api.github.com/users/nathomkar799";
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET", requestUrl);
+    // console.log(xhr.readyState);
+
+    // xhr.onreadystatechange = function () {
+    //   console.log(xhr.readyState);
+    //   if  (xhr.readyState == 4) {
+    //     const data = JSON.parse(this.responseText) //convers data from string to object
+    //     console.log(typeof data);//most of the tiem it comes in a form of string
+    //     console.log(data.followers);
+        
+    //   }
+    // };//Whenever state changes this function executes.
+
+
+    //getting data and manupulating data on page
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if  (xhr.readyState == 4) {
+        const data = JSON.parse(this.responseText) //converts data from string to object
+        console.log(typeof data);//most of the item comes in form of string
+        document.querySelector('#button').addEventListener('click', ()=> {
+            console.log(data.followers);
+            document.querySelector('#photo').innerHTML = `<img src = "${data.avatar_url}" >`    
+            document.querySelector('#folCount').innerHTML = `<h1> ${data.followers} </h1>`
+        })
+
+
+
+        
+      }
+    }
+
+    xhr.send();
+
+
+     
+
+    
+
+    
+  </script>
+</html>
