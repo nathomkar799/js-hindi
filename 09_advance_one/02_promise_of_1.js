@@ -32,7 +32,7 @@ promiseThree.then( (user)=> {
 
 const promiseFour = new Promise ( (resolve, reject)=> {
     setTimeout( ()=>{
-        let error = false
+        let error = true
 
         if (!error) {
             resolve({
@@ -46,8 +46,62 @@ const promiseFour = new Promise ( (resolve, reject)=> {
 })
 
 promiseFour.then( (user)=>{
-    console.log(user);
+    console.log("4", user);
     return user.username
-}).then( (p)=> {
-    console.log(p);
+}).then( (username)=> {
+    console.log("4", username);
+}).catch( (err)=> {
+    console.log("4", err);
+}).finally( ()=> console.log("4 Kuchh to huwa hai resolved or rejected"))
+
+const promiseFive = new Promise ( (resolve, reject)=>{
+    setTimeout(  ()=> {
+        let error = true
+
+        if (!error) {
+            resolve({
+                username : "JavaScript",
+                password : "123"
+            })
+        } else {
+            reject('JS went wrong')
+        }
+    }, 1000)
 })
+
+//other way
+
+async function consumePromiseFive() {
+    try {
+        const response = await promiseFive
+        console.log("5", response);
+    } catch (error) {
+        console.log("5",error);
+    }
+}
+
+consumePromiseFive()
+
+// async function getAllusers() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log("E", error);
+//     }
+// }
+// getAllusers()
+
+fetch('https://api.github.com/users/nathomkar799')
+.then( (response)=>{
+    return response.json()
+})
+.then( (data)=> {
+    console.log(data);
+})
+.catch( (error)=> {
+    console.log("Error");
+})
+
+
